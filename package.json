@@ -1,8 +1,11 @@
 {
   "name": "project",
+  "main": "/index.js",
+  "type":"module",
   "dependencies": {},
   "devDependencies": {
     "vite": "latest"
+    
   },
   "scripts": {
     "start": "vite",

@@ -1,3 +1,90 @@
-body {
+*, *::before, *::after {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+    font-family: 'Smythe', cursive;
+    height: 100vh;
 } 
+
+header {
+    background-image: url("images/header.png");
+    background-size: cover;
+    color: #FFFFFF;
+    padding: 2.875em 0 4.375em 2.875em;
+}
+
+.restaurant-title {
+    margin: 0;
+    font-size: 2.44rem;
+}
+
+.slogan {
+    font-size: 1.4rem;
+}
+
+section {
+    padding: 1em 2.875em 0 2.875em; 
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "img name btn"
+        "img desc btn"
+        "img price btn";
+    border-bottom: 1px solid #D2D2D2;
+    padding: 3.26em 0 3.19em 0;
+}
+
+.item-img {
+    grid-area: img;
+    margin-right: 1.94em;
+}
+
+.item-name {
+    grid-area: name;
+    font-size: 1.75rem;
+    line-height: 0.9rem;
+}
+
+.item-ingredients {
+    grid-area: desc;
+    color: #8B8B8B;
+    line-height: 1.5rem;
+}
+
+.item-price {
+    grid-area: price;
+    font-size: 1.25rem;
+    line-height: 1.2rem;
+}
+
+.item-add {
+    grid-area: btn;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    color: #3C3C3C;
+    border: 1.5px solid #DEDEDE;
+    background-color: inherit;
+    border-radius: 50%;
+    font-family: "inter", sans-serif;
+}
+
+.item-name,
+.item-ingredients,
+.item-price {
+    justify-self: start;
+}
+
+.item-add:hover {
+    cursor: pointer;
+    background-color: #F8F8F8;
+}
